@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo"></div>
+        <div class="title">Library</div>
+        <button class="add-book">+ New Book</button>
+    </header>
+    <div class="book-container">
+        <div class="books-header">
+            <div class="books-table-title">Title</div>
+            <div class="books-table-title">Author</div>
+            <div class="books-table-title">Pages</div>
+            <div class="books-table-title">Read</div>
+        </div>
+        <div class="books"></div>
+    </div>
+    <dialog id="favDialog">
+        <form>
+            <div class="form-group">
+                <label for="btitle">Title :</label>
+                <input type="text" id="btitle" name="btitle">
+            </div>
+            <div class="form-group">
+                <label for="bauthor">Author :</label>
+                <input type="text" id="bauthor" name="bauthor">
+            </div>
+            <div class="form-group">
+                <label for="bpages">Pages :</label>
+                <input type="text" id="bpages" name="bpages">
+            </div>
+            <div class="form-group">
+                <p>Did you read this book?</p>
+                <div class="radio-btn-container">
+                    <input type="radio" id="rad1" name="isRead" value="yes" checked>
+                    <label for="rad1">Yes</label>
+                    <input type="radio" id="rad2" name="isRead" value="no">
+                    <label for="rad2">No</label>
+                </div>
+            </div>
+            <div class="button-group">
+                <button value="cancel" formmethod="dialog">Cancel</button>
+                <button id="confirmBtn" value="devault">Add Book</button>
+            </div>
+        </form>
+    </dialog>
+    <script src="index.js"></script>
+</body>
+</html>

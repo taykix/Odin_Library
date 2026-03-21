@@ -1,0 +1,124 @@
+:root {
+    --primary-h: 57;
+    --primary-s: 44%;
+
+
+    --primary-100: hsl(var(--primary-h), var(--primary-s), 95%); /* Çok açık */
+    --primary-200: hsl(var(--primary-h), var(--primary-s), 85%);
+    --primary-300: hsl(var(--primary-h), var(--primary-s), 75%);
+    --primary-400: hsl(var(--primary-h), var(--primary-s), 60%);
+    --primary-500: hsl(var(--primary-h), var(--primary-s), 37%); /* ANA RENK */
+    --primary-600: hsl(var(--primary-h), var(--primary-s), 30%);
+    --primary-700: hsl(var(--primary-h), var(--primary-s), 25%);
+    --primary-800: hsl(var(--primary-h), var(--primary-s), 15%);
+    --primary-900: hsl(var(--primary-h), var(--primary-s), 10%); /* Çok koyu */    --primary-100: hsl(var(--primary-h), var(--primary-s), 10%); /*Koyu*/
+    --primary-500: hsl(var(--primary-h), var(--primary-s), 37%); /* ANA RENK */
+    --primary-900: hsl(var(--primary-h), var(--primary-s), 95%); /* ACIK */
+
+}
+
+@font-face {
+  font-family: 'Rock Salt'; /* Fonta verdiğin takma isim */
+  src: url('./fonts/RockSalt-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Roboto;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+header {
+    height: 10vh;
+    width: 60vw;
+    background-color: var(--primary-500);
+    display: flex;
+    align-items: center;
+}
+
+.add-book {
+    margin-left: auto;    
+    margin-right: 5ch;
+    width: 15ch;
+    height: 5ch;
+    font-family: Rock Salt;
+    background-color: var(--primary-500);
+    color: var(--primary-900);
+    border-radius: 1ch;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 3px var(--primary-200);
+}
+
+.add-book:hover {
+    background-color: var(--primary-700);
+}
+
+.add-book:active {
+    transform: translate(1px, 1px);
+}
+
+.title {
+    font-size: 5ch;
+    font-family: Rock Salt;
+    margin-left: 1ch;
+    align-self: end;
+    color: var(--primary-100);
+}
+
+.book-container {
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    height: 80vh;
+    background-color: var(--primary-900);
+}
+
+.book-container > button {
+    align-self: flex-end;
+    margin-top: auto;
+    margin-bottom: 1ch;
+    margin-right: 1ch;
+    width: 10vh;
+    height: 3vw;
+    border-radius: 1ch;
+    background-color: #FF9B51;
+    font-weight: 700;
+}
+
+input,
+button,
+select,
+textarea {
+    font: inherit;
+}
+
+form {
+    display: grid;
+    gap: 1rem;
+}
+
+p {
+    margin: 0;
+}
+
+.form-group {
+    display: flex;
+    gap: 0.2rem;
+    flex-direction: column;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+}
