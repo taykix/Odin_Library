@@ -18,10 +18,33 @@ function addBookToLibrary(title, author, pages, read) {
   myLibrary.push(newBook);
 }
 
+function getNewBookInputValues(bookForm) {
+  const formData = new FormData(bookForm);
+
+  const title = formData.get('btitle');
+  const author = formData.get('bauthor');
+  const pages = formData.get('bpages');
+  const isRead = formData.get('isRead');
+  
+  addBookToLibrary(title, author, pages, isRead);
+}
+
+function createBookCard() {
+}
+
 const newBookBtn = document.querySelector(".add-book");
 const favDialog = document.getElementById("favDialog");
+const bookForm = document.getElementById("book-form");
+
+bookForm.addEventListener("submit", function(e){
+  e.preventDefault();
+  getNewBookInputValues();
+  console.log(title + author + pages + isRead);
+});
 
 newBookBtn.addEventListener("click", () => {
   favDialog.showModal();
   console.log("Button clicklendi anansi");
 });
+
+
