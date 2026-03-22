@@ -81,7 +81,7 @@ header {
     grid-template-rows: repeat(auto-fill, 50px);
     gap: 2ch;
     width: 60vw;
-    height: 80vh;
+    height: 90vh;
     background-color: var(--primary-900);
     font-family: cursive;
     color: var(--primary-100);
