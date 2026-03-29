@@ -73,7 +73,6 @@ bookForm.addEventListener("submit", function(e){
 
 newBookBtn.addEventListener("click", () => {
   favDialog.showModal();
-  console.log("Button clicklendi anansi");
 });
 
 bookCardContainer.addEventListener("click", (e) => {
