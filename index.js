@@ -4,6 +4,8 @@ const newBookBtn = document.querySelector(".add-book");
 const favDialog = document.getElementById("favDialog");
 const bookForm = document.getElementById("book-form");
 const removeBtn = document.getElementById("");
+const confirmBtn = document.getElementById("confirmBtn");
+const cancelBtn = document.getElementById("cancelBtn");
 const bookCardContainer = document.querySelector(".book-card-container");
 
 function Book(title, author, pages, read) {
@@ -64,10 +66,16 @@ function addBookHtml(title, author, pages, isRead, id) {
 addBookToLibrary("War and Peace", "Tolstoy", "1800", "yes");
 displayBooks();
 
-bookForm.addEventListener("submit", function(e){
+confirmBtn.addEventListener("click", function(e){
   e.preventDefault();
   getNewBookInputValues(bookForm);
   displayBooks();
+  console.log("submit clicked");
+  favDialog.close();
+});
+
+cancelBtn.addEventListener("click", function(){
+  console.log("cancel Clicked");
   favDialog.close();
 });
 
