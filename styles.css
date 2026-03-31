@@ -3,6 +3,7 @@
     --primary-s: 44%;
 
 
+    --primary-10: hsl(var(--primary-h), var(--primary-s), 99%); /* COK ACIK */
     --primary-100: hsl(var(--primary-h), var(--primary-s), 95%); /* Çok açık */
     --primary-200: hsl(var(--primary-h), var(--primary-s), 85%);
     --primary-300: hsl(var(--primary-h), var(--primary-s), 75%);
@@ -11,9 +12,8 @@
     --primary-600: hsl(var(--primary-h), var(--primary-s), 30%);
     --primary-700: hsl(var(--primary-h), var(--primary-s), 25%);
     --primary-800: hsl(var(--primary-h), var(--primary-s), 15%);
-    --primary-900: hsl(var(--primary-h), var(--primary-s), 10%); /* Çok koyu */    --primary-100: hsl(var(--primary-h), var(--primary-s), 10%); /*Koyu*/
-    --primary-500: hsl(var(--primary-h), var(--primary-s), 37%); /* ANA RENK */
-    --primary-900: hsl(var(--primary-h), var(--primary-s), 95%); /* ACIK */
+    --primary-900: hsl(var(--primary-h), var(--primary-s), 10%); /* Çok koyu */
+    
 
 }
 
@@ -44,16 +44,18 @@ header {
     background-color: var(--primary-500);
     display: flex;
     align-items: center;
+    padding-top: 10px;
 }
 
 .add-book {
+    font-size: 1.2ch;
     margin-left: auto;    
     margin-right: 5ch;
     width: 15ch;
     height: 5ch;
     font-family: Rock Salt;
     background-color: var(--primary-500);
-    color: var(--primary-900);
+    color: var(--primary-100);
     border-radius: 1ch;
     border: none;
     outline: none;
@@ -73,18 +75,13 @@ header {
     font-family: Rock Salt;
     margin-left: 1ch;
     align-self: end;
-    color: var(--primary-100);
+    color: var(--primary-900);
 }
 
 .book-container {
-    display: grid;
-    grid-template-rows: repeat(auto-fill, 50px);
-    gap: 2ch;
     width: 60vw;
     height: 90vh;
-    background-color: var(--primary-900);
-    font-family: cursive;
-    color: var(--primary-100);
+    background-color: var(--primary-300);
 }
 
 .book-card,
@@ -93,17 +90,43 @@ header {
     grid-template-columns: repeat(5, 1fr);
     vertical-align: center;
     align-self: center;
-    padding-left: 2ch;
 }
 
 .book-card {
     height: 50px;
-    padding-left: 4ch;
+    display: grid;
+    grid-template-rows: repeat(auto-fill, 50px);
+    gap: 2ch;
+    font-family: cursive;
+    color: var(--primary-900);
+}
+
+.book-table {
+    margin-left: 4ch;
+    margin-right: 4ch;
+    background-color: var(--primary-10);
+    border-radius: 5px;
+}
+
+.book-table-legend {
+    margin-top: 2ch;
+    margin-bottom: 1ch;
+    margin-left: 4ch;
+    font-family: cursive; 
 }
 
 .books-header {
+    border-radius: 5px;
+    background-color: var(--primary-100);
     font-weight: 500;
-    font-size: 3ch;
+    font-size: 2ch;
+    height: 50px;
+    align-items: center;
+}
+
+.books-header,
+.book-card-container {
+    padding-left: 1ch;
 }
 
 .books-card-title {

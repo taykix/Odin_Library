@@ -66,16 +66,18 @@ function addBookHtml(title, author, pages, isRead, id) {
 addBookToLibrary("War and Peace", "Tolstoy", "1800", "yes");
 displayBooks();
 
-confirmBtn.addEventListener("click", function(e){
+bookForm.addEventListener("submit", function(e){
   e.preventDefault();
   getNewBookInputValues(bookForm);
   displayBooks();
   console.log("submit clicked");
+  bookForm.reset();
   favDialog.close();
 });
 
 cancelBtn.addEventListener("click", function(){
   console.log("cancel Clicked");
+  bookForm.reset();
   favDialog.close();
 });
 

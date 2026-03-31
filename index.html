@@ -13,29 +13,31 @@
         <button class="add-book">+ New Book</button>
     </header>
     <div class="book-container">
-        <div class="books-header">
-            <div class="books-table-title">Title</div>
-            <div class="books-table-title">Author</div>
-            <div class="books-table-title">Pages</div>
-            <div class="books-table-title">Read</div>
-            <div class="books-table-title"></div>
-        </div>
-        <div class="book-card-container">
+        <div class="book-table-legend">All Books</div>
+        <div class="book-table">
+            <div class="books-header">
+                <div class="books-table-title">Book Name</div>
+                <div class="books-table-title">Writer</div>
+                <div class="books-table-title">Pages</div>
+                <div class="books-table-title">Read Status</div>
+                <div class="books-table-title">Action</div>
+            </div>
+            <div class="book-card-container"></div>
         </div>
     </div>
     <dialog id="favDialog">
         <form id="book-form">
             <div class="form-group">
                 <label for="btitle">Title :</label>
-                <input type="text" id="btitle" name="btitle">
+                <input type="text" id="btitle" name="btitle" maxlength="20" minlength="3" required>
             </div>
             <div class="form-group">
                 <label for="bauthor">Author :</label>
-                <input type="text" id="bauthor" name="bauthor">
+                <input type="text" id="bauthor" name="bauthor" maxlength="15" required>
             </div>
             <div class="form-group">
                 <label for="bpages">Pages :</label>
-                <input type="text" id="bpages" name="bpages">
+                <input type="number" id="bpages" name="bpages" min="1" value="0">
             </div>
             <div class="form-group">
                 <p>Did you read this book?</p>
@@ -47,8 +49,8 @@
                 </div>
             </div>
             <div class="button-group">
-                <button id="cancelBtn" value="cancel" formmethod="dialog">Cancel</button>
-                <button id="confirmBtn" value="submit">Add Book</button>
+                <button id="cancelBtn" type="button" value="cancel" formmethod="dialog">Cancel</button>
+                <button id="confirmBtn" type="submit" value="submit">Add Book</button>
             </div>
         </form>
     </dialog>
